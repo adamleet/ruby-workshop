@@ -27,3 +27,12 @@ months.each do |key, value|
     puts "#{key} => #{value}"
 end
 
+user_ages = {:steve => 45, :bill => 34, :henry => 12, :mary => 67, :jane => 89}
+user_ages.sort_by{|name, age| age}
+user_ages.sort_by{|name, age| name}
+user_ages.sort_by{|name, age| name}.reverse
+
+user_data = {:steve => {:name => "Steve", :age => 56}, :ken => {:name => "Kenny", :age => 78}, :jane => {:name => "Janet", :age => 26}, :mary => {:name => "Mary", :age => 38}}
+user_data.sort_by{|key, value| value[:age]}
+
+user_data.reject{|key, value| value < 35}
